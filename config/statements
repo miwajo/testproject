@@ -1,0 +1,11 @@
+SELECT * FROM users WHERE username = "MJ" OR id = 2
+
+SELECT * FROM users WHERE username = "MJ" AND id = 1
+
+SELECT * FROM projects WHERE created_at > 2014-02-10
+
+SELECT * FROM projects WHERE created_at > 2014-02-10 OR created_at < 2015-02-11
+
+UPDATE projects
+SET name = "Project One"
+WHERE id = "1"

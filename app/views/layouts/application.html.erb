@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testproject</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<a href="/users">USERS | </a>
+<a href="/blogs">BLOGS | </a>
+<a href="/projects">PROJECTS</a>
+
+<p>
+	<img width="200" src="/assets/hello.jpg">
+</p>
+
+<%= yield %>
+
+<p>
+How about a footer here.
+</p>
+
+</body>
+</html>

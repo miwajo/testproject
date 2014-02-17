@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  moving_deadline: 2014-02-11
+
+two:
+  name: MyString
+  moving_deadline: 2014-02-11

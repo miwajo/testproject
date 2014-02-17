@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Entry text:</strong>
+  <%= @blog_entry.entry_text %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @blog_author %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @blog_user %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @blog_entry.category %>
+</p>
+
+<p>
+  <strong>Blog:</strong>
+  <%= @blog_entry.blog_id %>
+</p>
+
+<h4></h4>
+
+<% if @last_comment != nil %>
+
+  <table>
+    <tr>
+      <td><h4>Last Blog Comments</h4></td>
+    </tr>
+    <tr>
+      <td><%= @last_comment %></td>
+    </tr>
+  </table>
+
+  else
+
+  <P>
+    No comments yet.
+  </p>
+
+<%= end %>
+
+<br>
+<br>
+
+<%= link_to 'Edit', edit_blog_entry_path(@blog_entry) %> |
+<%= link_to 'Back', blog_entries_path %>
