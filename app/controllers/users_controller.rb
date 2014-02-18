@@ -5,15 +5,14 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
-    @user_last =  User.last.username
+    # @user_last =  User.last.username
     # @user_query = User.where(id: 2, OR username: "MJ")
     # @user_query = User.where(id: 2 OR username: 'MJ')
-    @user_query = User.where(id: 1, username: "MJ")
+    # @user_query = User.where(id: 1, username: "MJ")
     #or
-    @users_or = User.where(first_name: ["Frank", "TJ", "Alf"])
-    @user_special = @user_query[0].username
-
-    @users_with_ids_over2 = User.where("id > 1")
+    # @users_or = User.where(first_name: ["Frank", "TJ", "Alf"])
+    # @user_special = @user_query[0].username
+    # @users_with_ids_over2 = User.where("id > 1")
   end
 
   # GET /users/1

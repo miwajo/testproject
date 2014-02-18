@@ -17,12 +17,20 @@
     <% @blog_entries.each do |blog_entry| %>
       <tr>
         <td><%= blog_entry.entry_text %></td>
-        <td><%= blog_entry.user_id %></td>
-        <td><%= blog_entry.category %></td>
-        <td><%= blog_entry.blog_id %></td>
-        <td><%= link_to 'Show', blog_entry %></td>
-        <td><%= link_to 'Edit', edit_blog_entry_path(blog_entry) %></td>
-        <td><%= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td valign="top"><%= blog_entry.user_id %></td>
+        <td valign="top"><%= blog_entry.category %></td>
+        <td valign="top"><%= blog_entry.blog_id %></td>
+      </tr>
+      <tr>
+        <td height="40" valign="bottom">
+          <table style="padding: 0px">
+            <tr>
+              <td><%= link_to 'Show', blog_entry %></td>
+              <td><%= link_to 'Edit', edit_blog_entry_path(blog_entry) %></td>
+              <td><%= link_to 'Destroy', blog_entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          </table>  
+        </td>
       </tr>
     <% end %>
   </tbody>
